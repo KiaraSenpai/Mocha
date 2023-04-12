@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom Styles */
+    body {
+      background-image: url('https://e0.pxfuel.com/wallpapers/796/72/desktop-wallpaper-chuu-loona-profile-k-pop-database.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    .form-container h2 {
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border-radius: 0;
+      border-color: #ddd;
+      box-shadow: none;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+    #message {
+      height: 150px;
+    }
+    .back-to-home {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-container">
+          <h2>Contact Us</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Send Message</button>
+          </form>
+          <a href="/" class="btn btn-outline-secondary btn-block back-to-home">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Send contact form data to server using AJAX
+    $(function() {
+      $('#contact-form').submit(function(event) {
+        event.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val
